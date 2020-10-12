@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'production') {
 
 export const fetchCapabilities = () => {
   return dispatch => {
-    axios.get("https://techstack-hateoas-api.herokuapp.com/dashboard")
+    axios.get(URL)
       .then(response => dispatch(setCapabilities(response.data)))
       .catch(error => dispatch(errorCapability(error.response.data)))
   }
